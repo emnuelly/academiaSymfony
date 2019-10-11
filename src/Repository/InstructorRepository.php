@@ -2,24 +2,24 @@
 
 namespace App\Repository;
 
-use App\Entity\Student;
+use App\Entity\Instructor;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
-class StudentRepository extends ServiceEntityRepository
+class InstructorRepository extends ServiceEntityRepository
 {
     /**
      * @param ManagerRegistry $managerRegistry
      */
     public function __construct(ManagerRegistry $managerRegistry)
     {
-        parent::__construct($managerRegistry, Student::class);
+        parent::__construct($managerRegistry, Instructor::class);
     }
 
-    public function save(Student $student) {
+    public function save(Instructor $instructor) {
         $entityManager = $this->getEntityManager();
         $entityManager->beginTransaction();
-        $entityManager->persist($student);
+        $entityManager->persist($instructor);
         $entityManager->commit();
         $entityManager->flush();
     }

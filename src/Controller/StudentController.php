@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Controller;
 
 use App\Entity\Student;
@@ -10,28 +9,48 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response; // quando esse import foi add?
 use Symfony\Component\Routing\Annotation\Route;
 
-class EnrollmentController extends AbstractController
+/**
+ * @Route("/students")
+ */
+class StudentController extends AbstractController
 {
-
     /**
-     * @Route("/students", name="list_students");
+     * @Route("/", name="list_students");
      */
     public function allStudentsAction(StudentRepository $studentRepository) {
         $students = $studentRepository->findAll();
-
-        return $this->render('enrollment/all.html.twig',[
+        return $this->render('students/all.html.twig',[
             "alunos" => $students
         ]);
     }
+
     /**
-     * @Route("/matricula", methods={"GET"}, name="enrollment")
+     * @Route("/show/{id}", name="edit_student", methods={"GET"})
      */
-    public function enrollmentAction() {
-        return $this->render("enrollment/new.html.twig");
+    public function editStudentAction(int $id, StudentRepository $studentRepository) {
+        $student = $studentRepository->find('id', $id);
+        return $this->render('students/student.html.twig',[
+            "aluno" => $student
+        ]);
     }
 
     /**
-     * @Route("/matricula", methods={"POST"}, name="finish_enrollment")
+     * @Route("/delete/{id}", name="delete_student", methods={"GET"})
+     */
+    public function deleteStudentAction(int $id, StudentRepository $studentRepository) {
+        $student = $studentRepository->find('id', $id);
+      // fazer comando de delete do doctrine
+    }
+
+    /**
+     * @Route("/matricula", methods={"GET"}, name="student_enrollment")
+     */
+    public function enrollmentAction() {
+        return $this->render("students/new.html.twig");
+    }
+
+    /**
+     * @Route("/matricula", methods={"POST"}, name="finish_student_enrollment")
      */
     public function finishEnrollmentAction(Request $request, StudentRepository $studentRepository) {
 
@@ -43,7 +62,7 @@ class EnrollmentController extends AbstractController
         $payment = $request->get("payment");
         $email = $request->get("email");
         $phone = $request->get("phone");
-        
+
         $student = new Student();
         $student->setNome($nome);
         $student->setAddress($address);
@@ -58,4 +77,5 @@ class EnrollmentController extends AbstractController
         return $this->redirectToRoute("list_students");
 
     }
+
 }

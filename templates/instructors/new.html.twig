@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title %}Matricula {% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Cadastrar Instrutor </h1>
+        </div>
+        <form action="{{ path("finish_instructor_enrollment") }}" method="POST">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="bdate">Data de Nascimento:</label>
+                    <input type="text" name="bdate" id="bdate" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="admDate">Data de Admissão:</label>
+                    <input type="text" name="admDate" id="admDate" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="salary">Salario:</label>
+                    <input type="text" name="salary" id="salary" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

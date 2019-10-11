@@ -44,6 +44,8 @@
                         <td>{{ aluno.payment }}</td>
                         <td>{{ aluno.email }}</td>
                         <td>{{ aluno.phone }}</td>
+                        <td><a href="{{ path("edit_student", {id: aluno.id})}}"> edit </a></td>
+                        <td> <a href="{{ path("delete_student", {id: aluno.id})}}"> delete </a> </td>
                     </tr>
                     {% endfor %}
                 </tbody>
