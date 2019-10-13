@@ -23,6 +23,13 @@
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>CPF</th>
+                        <th>Data de Nascimento</th>
+                        <th>Plano</th>
+                        <th>Forma de Pagamento</th>
+                        <th>E-Mail</th>
+                        <th>Telefone</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +37,15 @@
                     <tr>
                         <td>{{ aluno.id }}</td>
                         <td>{{ aluno.nome }}</td>
+                        <td>{{ aluno.address }}</td>
+                        <td>{{ aluno.cpf }}</td>
+                        <td>{{ aluno.bdate }}</td>
+                        <td>{{ aluno.plano }}</td>
+                        <td>{{ aluno.payment }}</td>
+                        <td>{{ aluno.email }}</td>
+                        <td>{{ aluno.phone }}</td>
+                        <td><a href="{{ path("edit_student", {id: aluno.id})}}"> edit </a></td>
+                        <td> <a href="{{ path("delete_student", {id: aluno.id})}}"> delete </a> </td>
                     </tr>
                     {% endfor %}
                 </tbody>

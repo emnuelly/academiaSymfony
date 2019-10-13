@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Academia Monte Olimpo - {% block title %}{% endblock %}</title>
+    <title>Academia Symfony - {% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Academia Monte Olimpo</a>
+    <a class="navbar-brand" href="{{ path('home') }}">Academia Symfony</a>
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
             aria-controls="collapsibleNavId"
             aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -20,9 +20,17 @@
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
                    aria-expanded="false">Alunos</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <a class="dropdown-item" href="{{ path('enrollment') }}">Matricular</a>
-                    <a class="dropdown-item" href="{{ path('list_students') }}">Alunos</a>
+                    <a class="dropdown-item" href="{{ path('student_enrollment') }}">Matricular</a>
+                    <a class="dropdown-item" href="{{ path('list_students') }}">Listar</a>
                 </div>
+            </li>
+            <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Instrutores</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="{{ path('instructor_enrollment') }}">Cadastrar</a>
+                <a class="dropdown-item" href="{{ path('list_instructors') }}">Listar</a>
+            </div>
             </li>
         </ul>
     </div>

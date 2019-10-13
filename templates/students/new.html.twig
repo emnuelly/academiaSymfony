@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block title %}Matricula {% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Matricular Aluno</h1>
+        </div>
+        <form action="{{ path("finish_student_enrollment") }}" method="POST">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail:</label>
+                    <input type="email" name="email" id="email" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço:</label>
+                    <input type="text" name="address" id="address" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="text" name="phone" id="phone" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="bdate">Data de Nascimento:</label>
+                    <input type="text" name="bdate" id="bdate" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="plano">Plano:</label>
+                    <input type="text" name="plano" id="plano" class="form-control"/>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Forma de Pagamento:</label>
+                    <input type="text" name="payment" id="payment" class="form-control"/>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-save"></i> Salvar
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
