@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f7839ae-63a1-4bbb-972d-0185ba396838" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/InstructorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Instructor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/MedEvall.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191011184626.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191011185158.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191011195658.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20191011210855.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/InstructorRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/MedEvallRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/all.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/students/new.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/EnrollmentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/StudentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/homeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/homeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/StudentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/StudentRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/enrollment/all.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/instructors/all.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/enrollment/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/instructors/new.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="2f7839ae-63a1-4bbb-972d-0185ba396838" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +226,7 @@
       <updated>1570657691010</updated>
       <workItem from="1570657692281" duration="890000" />
       <workItem from="1570658594650" duration="5511000" />
-      <workItem from="1570727013376" duration="28787000" />
+      <workItem from="1570727013376" duration="29539000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1570735463040</created>
@@ -256,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570735463040</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".">
+      <created>1570831985245</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570831985245</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
