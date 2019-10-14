@@ -9,6 +9,14 @@
             <strong>{{ message }}</strong>
         </div>
     {% endfor %}
+    {% for message in app.flashes('alert') %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>{{ message }}</strong>
+        </div>
+    {% endfor %}
 
 
     <script>
@@ -23,6 +31,8 @@
                     <tr>
                         <th>Id</th>
                         <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,6 +40,13 @@
                     <tr>
                         <td>{{ aluno.id }}</td>
                         <td>{{ aluno.nome }}</td>
+                        <td>{{ aluno.idade }}</td>
+                        <td>
+                            <a href="{{ path('form_edit_student',{id: aluno.id}) }}" class="btn btn-primary"><i class="fa fa-edit"></i> Editar</a>
+                        </td>
+                        <td>
+                            <a href="{{ path('form_remove_student',{id: aluno.id}) }}" class="btn btn-danger"><i class="fa fa-trash"></i> Remover</a>
+                        </td>
                     </tr>
                     {% endfor %}
                 </tbody>

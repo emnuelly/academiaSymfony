@@ -25,4 +25,22 @@ class StudentRepository extends ServiceEntityRepository
         $entityManager->commit();
         $entityManager->flush();
     }
+
+    public function update($student)
+    {
+        $entityManager = $this->getEntityManager();
+        $entityManager->beginTransaction();
+        $entityManager->merge($student);
+        $entityManager->commit();
+        $entityManager->flush();
+    }
+
+    public function remove($student)
+    {
+        $entityManager = $this->getEntityManager();
+        $entityManager->beginTransaction();
+        $entityManager->remove($student);
+        $entityManager->commit();
+        $entityManager->flush();
+    }
 }
